@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+    --primary: #0ea5e9;
+    --secondary: #6366f1;
+    --accent: #10b981;
+    --danger: #ef4444;
+    --gradient: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
+
+@media (prefers-color-scheme: dark) {
+    .stApp { background: linear-gradient(135deg, #020817 0%, #0a0f1e 100%) !important; color: #e2e8f0 !important; }
+    .stTextInput > div > div > input { background: #0f172a !important; color: #e2e8f0 !important; }
+    [data-testid="stSidebar"] { background: #020817 !important; }
+    [data-testid="stSidebar"] * { color: #e2e8f0 !important; }
+    .chat-ai { background: #0f172a !important; color: #e2e8f0 !important; }
+    .stat-box { background: #0f172a !important; }
+    .entity-card { background: #0f172a !important; }
+}
+@media (prefers-color-scheme: light) {
+    .stApp { background: #f0f9ff !important; color: #0f172a !important; }
+    [data-testid="stSidebar"] { background: #e0f2fe !important; }
+    .chat-ai { background: white !important; }
+    .stat-box { background: white !important; }
+    .entity-card { background: white !important; }
+}
+
+[data-testid="stSidebar"] { border-right: 4px solid var(--primary) !important; }
+
+.hero { text-align: center; padding: 2rem 0 1.5rem 0; margin-bottom: 2rem; position: relative; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gradient); }
+.hero h1 { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; }
+.hero p { font-size: 0.9rem; opacity: 0.6; margin-top: 0.3rem; }
+
+.section-label { font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--gradient); opacity: 0.3; }
+
+.chat-user { background: var(--gradient); color: white; padding: 0.8rem 1.2rem; border-radius: 16px 16px 4px 16px; margin: 0.5rem 0; max-width: 80%; margin-left: auto; font-size: 0.9rem; }
+.chat-ai { border: 1px solid var(--primary); padding: 0.8rem 1.2rem; border-radius: 16px 16px 16px 4px; margin: 0.5rem 0; max-width: 85%; font-size: 0.9rem; line-height: 1.7; }
+.chat-source { font-size: 0.72rem; color: var(--primary); margin-top: 0.4rem; font-style: italic; }
+
+.stat-box { border: 1px solid var(--primary); border-radius: 10px; padding: 0.8rem 1.2rem; text-align: center; flex: 1; }
+.stat-num { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+.stat-row { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+
+.entity-card { border: 1px solid var(--primary); border-radius: 12px; padding: 1rem 1.2rem; margin-bottom: 0.5rem; }
+.entity-card h4 { font-family: 'Syne', sans-serif; font-size: 0.85rem; color: var(--primary); margin: 0 0 0.3rem 0; }
+
+.disclaimer { background: rgba(239,68,68,0.1); border: 1px solid var(--danger); border-radius: 10px; padding: 0.8rem 1.2rem; font-size: 0.82rem; color: var(--danger); margin-top: 1rem; }
+
+.stButton > button { background: var(--gradient) !important; color: white !important; border: none !important; border-radius: 10px !important; font-family: 'Syne', sans-serif !important; font-weight: 600 !important; width: 100% !important; transition: all 0.2s !important; }
+.stButton > button:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 25px rgba(14,165,233,0.4) !important; }
+.stTextInput > div > div > input { border: 1.5px solid var(--primary) !important; border-radius: 10px !important; padding: 0.75rem 1rem !important; }
+.stTextInput label { color: var(--primary) !important; font-size: 0.82rem !important; font-weight: 500 !important; }
+.stDownloadButton > button { background: transparent !important; border: 2px solid var(--primary) !important; color: var(--primary) !important; border-radius: 10px !important; font-family: 'Syne', sans-serif !important; font-weight: 600 !important; width: 100% !important; }
+
+#MainMenu {visibility: hidden;} footer {visibility: hidden;} header {visibility: hidden;}
